@@ -1,3 +1,4 @@
+Puerto 9595.
 Para la base de datos, creé una propia con el fin de completar el examen(Se encuentra en el proyecto en el folder de default package).
 Otro punto importante es que estos son los usuarios para ingresar al sistema:
 
