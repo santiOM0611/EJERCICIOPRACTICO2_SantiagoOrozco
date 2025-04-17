@@ -1,10 +1,11 @@
 <!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
     <body>
         <!-- 1 Botón para agregar Género -->
         <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
-            <div class="container">
+            <div class="container" sec:authorize="hasRole('ROLE_ADMIN')">
                 <div class="row">
                     <div class="col-md-3">   
                         <button 
@@ -90,13 +91,13 @@
                                             <td class="fs-6">[[${genero.nombre}]]</td>
                                             <td class="fs-6">[[${genero.descripcion}]]</td>
                                             <td class="text-center" th:text="${genero.activo} ? 'Activo' : 'Inactivo'" />
-                                            <td>
+                                            <td sec:authorize="hasRole('ROLE_ADMIN')">
                                                 <a th:href="@{/genero/eliminar/}+${genero.idGenero}"
                                                    class="btn btn-danger">
                                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
                                                 </a>
                                             </td>
-                                            <td>
+                                            <td sec:authorize="hasRole('ROLE_ADMIN')">
                                                 <a th:href="@{/genero/modificar/}+${genero.idGenero}"
                                                    class="btn btn-success">
                                                     <i class="fas fa-pencil"></i> [[#{accion.actualizar}]]
