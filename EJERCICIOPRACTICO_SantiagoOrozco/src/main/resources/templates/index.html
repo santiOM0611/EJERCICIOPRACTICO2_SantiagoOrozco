@@ -6,7 +6,22 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        
+
+        <div class="container">
+            <!-- Información del cine -->
+            <section>
+                <h1>Bienvenidos al Cine</h1>
+                <p>Disfruta de una experiencia cinematográfica única en nuestro cine. Ofrecemos una amplia variedad de películas y funciones para todos los gustos.</p>
+                <p>Visita nuestras salas y vive una experiencia inolvidable.</p>
+            </section>
+
+            <!-- Video sobre el cine -->
+            <section>
+                <h2>Conoce nuestro Cine</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IH3PQdWpXZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        </div>
+
         <footer th:replace="~{layout/plantilla :: footer}"/>          
     </body>
 </html>
